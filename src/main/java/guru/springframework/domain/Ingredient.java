@@ -13,7 +13,7 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
     @ManyToOne
-    private Receipe receipe;
+    private Recipe recipe;
     @OneToOne(fetch = FetchType.EAGER)          // eager in @OneToOne is by default so it is not necessary - just for example
     private UnitOfMeasure uom;
 
@@ -41,12 +41,12 @@ public class Ingredient {
         this.amount = amount;
     }
 
-    public Receipe getReceipe() {
-        return receipe;
+    public Recipe getRecipe() {
+        return recipe;
     }
 
-    public void setReceipe(Receipe receipe) {
-        this.receipe = receipe;
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
     }
 
     public UnitOfMeasure getUom() {

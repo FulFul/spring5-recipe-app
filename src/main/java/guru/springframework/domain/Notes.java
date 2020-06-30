@@ -11,7 +11,7 @@ public class Notes {
     @Lob
     private String recipeNotes;
     @OneToOne
-    private Receipe receipe;
+    private Recipe recipe;
 
     public Long getId() {
         return id;
@@ -29,11 +29,11 @@ public class Notes {
         this.recipeNotes = recipeNotes;
     }
 
-    public Receipe getReceipe() {
-        return receipe;
+    public Recipe getRecipe() {
+        return recipe;
     }
 
-    public void setReceipe(Receipe receipe) {
-        this.receipe = receipe;
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
     }
 }
