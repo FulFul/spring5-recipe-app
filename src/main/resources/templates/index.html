@@ -6,5 +6,32 @@
 </head>
 <body>
 <h1>My Recipes!</h1>
+
+<table>
+    <thread>
+        <tr>
+            <th style="width: 150px;">Id</th>
+            <th style="width: 150px;">Description</th>
+            <th style="width: 150px;">prepTime</th>
+            <th style="width: 150px;">cookTime</th>
+            <th style="width: 150px;">servings</th>
+            <th style="width: 150px;">source</th>
+            <th style="width: 150px;">url</th>
+        </tr>
+    </thread>
+
+    <tbody>
+    <tr th:each="recipe : ${recipes_from_controller}">
+        <td th:text="${recipe.id}">replace it</td>
+        <td th:text="${recipe.description}">replace it</td>
+        <td th:text="${recipe.prepTime}">replace it</td>
+        <td th:text="${recipe.cookTime}">replace it</td>
+        <td th:text="${recipe.servings}">replace it</td>
+        <td th:text="${recipe.source}">replace it</td>
+        <td th:text="${recipe.url}">replace it</td>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>

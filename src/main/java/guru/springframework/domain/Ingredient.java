@@ -17,6 +17,12 @@ public class Ingredient {
     @OneToOne(fetch = FetchType.EAGER)          // eager in @OneToOne is by default so it is not necessary - just for example
     private UnitOfMeasure uom;
 
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure uom) {
+        this.description = description;
+        this.amount = amount;
+        this.uom = uom;
+    }
+
     public Long getId() {
         return id;
     }
